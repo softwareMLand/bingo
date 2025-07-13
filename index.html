@@ -13,44 +13,75 @@
     }
     body {
       font-family: 'Roboto', sans-serif;
-      background: #f7f7f7;
+      background: #f4f6fc;
       color: #333;
+      line-height: 1.6;
     }
     header {
-      background-color: #4e54c8;
+      background: linear-gradient(to right, #4e54c8, #8f94fb);
       color: white;
-      padding: 20px;
+      padding: 60px 20px 40px;
       text-align: center;
     }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.2rem;
+    }
     nav {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      background-color: #3c40a0;
-      padding: 10px;
+      background: #ffffff;
+      padding: 10px 0;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      text-align: center;
     }
     nav a {
-      color: white;
+      color: #4e54c8;
       text-decoration: none;
+      margin: 0 15px;
       font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #8f94fb;
     }
     .hero {
-      background: url('https://images.unsplash.com/photo-1588776814546-ecce0f69b4b1') no-repeat center center/cover;
+      background: linear-gradient(to right, #8f94fb, #4e54c8);
       color: white;
-      padding: 100px 20px;
+      padding: 80px 20px;
       text-align: center;
     }
     .hero h1 {
-      font-size: 3rem;
+      font-size: 2.5rem;
       margin-bottom: 20px;
     }
     .hero p {
       font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+    .hero a {
+      background: white;
+      color: #4e54c8;
+      padding: 12px 25px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 25px;
+      transition: background 0.3s;
+    }
+    .hero a:hover {
+      background: #e0e0ff;
     }
     section {
-      padding: 40px 20px;
-      max-width: 1100px;
+      padding: 60px 20px;
+      max-width: 1200px;
       margin: auto;
+    }
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 40px;
+      color: #4e54c8;
     }
     .services {
       display: grid;
@@ -59,27 +90,53 @@
     }
     .service {
       background: white;
-      padding: 20px;
+      padding: 25px;
       border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s;
+    }
+    .service:hover {
+      transform: translateY(-5px);
     }
     .service h3 {
       color: #4e54c8;
       margin-bottom: 10px;
     }
+    .service p {
+      color: #555;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 20px;
+    }
+    ul li::before {
+      content: "✔️ ";
+      color: #4e54c8;
+    }
+    .contact {
+      background: #4e54c8;
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+    }
+    .contact a {
+      color: #fff;
+      text-decoration: underline;
+    }
     footer {
-      background-color: #222;
+      background: #2e2e2e;
       color: white;
       text-align: center;
       padding: 20px;
-      margin-top: 40px;
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>MLand Software</h1>
-    <p>Soluciones completas para tu negocio de bingo</p>
+    <p>La solución completa para tus bingos virtuales y presenciales</p>
   </header>
 
   <nav>
@@ -89,52 +146,53 @@
   </nav>
 
   <section class="hero">
-    <h1>Lleva tu bingo al siguiente nivel</h1>
-    <p>Software profesional, transmisiones en vivo, ventas controladas, todo desde un solo lugar</p>
+    <h1>¡Transforma tu bingo en un negocio profesional!</h1>
+    <p>Todo lo que necesitas: Software, Transmisión, Control Financiero y Asesoría.</p>
+    <a href="#contacto">Solicita una demo</a>
   </section>
 
   <section id="servicios">
-    <h2>¿Qué ofrecemos?</h2>
+    <h2 class="section-title">¿Qué incluye nuestro servicio?</h2>
     <div class="services">
       <div class="service">
         <h3>Software de Bingo</h3>
-        <p>Generación y control de tablas, sorteos automáticos y exportación en PDF.</p>
+        <p>Organiza sorteos automáticos, genera tablas personalizadas, imprime en PDF y controla todo desde tu PC.</p>
       </div>
       <div class="service">
         <h3>Transmisión en Vivo</h3>
-        <p>Conexión directa con Facebook y YouTube, animaciones, marcación en pantalla.</p>
+        <p>Incluye animaciones, marcación de números, cámara virtual, y conexión directa con redes sociales.</p>
       </div>
       <div class="service">
         <h3>Planillas de Venta</h3>
-        <p>Registros listos para imprimir, numeración automática y control por vendedor.</p>
+        <p>Formatos listos para impresión, control de lotes, numeración automática y registro por vendedor.</p>
       </div>
       <div class="service">
         <h3>Caja Financiera</h3>
-        <p>Controla entradas, salidas, ventas por método de pago y resumen de ingresos.</p>
+        <p>Sistema de ingresos y egresos, método de pagos, cierre de jornada y reportes automáticos.</p>
       </div>
     </div>
   </section>
 
   <section id="asesoria">
-    <h2>Asesoría Completa</h2>
-    <p>Te guiamos paso a paso para que montes tu negocio desde cero:</p>
-    <ul>
-      <li>Cómo organizar tu primera transmisión</li>
-      <li>Cómo vender y entregar tus tablas</li>
-      <li>Cómo atraer audiencia y aumentar las ventas</li>
-      <li>Soporte técnico continuo</li>
+    <h2 class="section-title">Asesoría Integral</h2>
+    <p style="text-align: center; max-width: 800px; margin: auto;">En MLand Software no solo te damos herramientas, también te enseñamos cómo usarlas para que tu bingo sea rentable desde el primer sorteo.</p>
+    <ul style="max-width: 800px; margin: 30px auto 0;">
+      <li>📺 Cómo organizar tu primera transmisión en redes sociales</li>
+      <li>🎟️ Métodos para distribuir y vender tus tablas</li>
+      <li>📢 Estrategias para atraer audiencia y aumentar ventas</li>
+      <li>🛠️ Soporte técnico continuo antes, durante y después de cada evento</li>
     </ul>
   </section>
 
-  <section id="contacto">
-    <h2>Contáctanos</h2>
-    <p>Escríbenos para más información o una demostración:</p>
+  <section id="contacto" class="contact">
+    <h2>Contáctanos Hoy</h2>
+    <p>¿Listo para comenzar? ¡Hablemos!</p>
     <p>Email: <a href="mailto:mlandsoftware@gmail.com">mlandsoftware@gmail.com</a></p>
     <p>WhatsApp: <a href="https://wa.me/593999999999" target="_blank">+593 99 999 9999</a></p>
   </section>
 
   <footer>
-    <p>&copy; 2025 MLand Software. Todos los derechos reservados.</p>
+    <p>&copy; 2025 MLand Software. Todos los derechos reservados. | Diseñado para emprendedores de verdad 🎯</p>
   </footer>
 </body>
 </html>
