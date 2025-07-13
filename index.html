@@ -1,10 +1,140 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-  <title>Mi primera página web</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MLand Software - Soluciones para Bingos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: #f7f7f7;
+      color: #333;
+    }
+    header {
+      background-color: #4e54c8;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      background-color: #3c40a0;
+      padding: 10px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .hero {
+      background: url('https://images.unsplash.com/photo-1588776814546-ecce0f69b4b1') no-repeat center center/cover;
+      color: white;
+      padding: 100px 20px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 1.2rem;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+    .service {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    .service h3 {
+      color: #4e54c8;
+      margin-bottom: 10px;
+    }
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body>
-  <h1>Hola, mundo!</h1>
-  <p>Este es un párrafo de ejemplo.</p>
+  <header>
+    <h1>MLand Software</h1>
+    <p>Soluciones completas para tu negocio de bingo</p>
+  </header>
+
+  <nav>
+    <a href="#servicios">Servicios</a>
+    <a href="#asesoria">Asesoría</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <section class="hero">
+    <h1>Lleva tu bingo al siguiente nivel</h1>
+    <p>Software profesional, transmisiones en vivo, ventas controladas, todo desde un solo lugar</p>
+  </section>
+
+  <section id="servicios">
+    <h2>¿Qué ofrecemos?</h2>
+    <div class="services">
+      <div class="service">
+        <h3>Software de Bingo</h3>
+        <p>Generación y control de tablas, sorteos automáticos y exportación en PDF.</p>
+      </div>
+      <div class="service">
+        <h3>Transmisión en Vivo</h3>
+        <p>Conexión directa con Facebook y YouTube, animaciones, marcación en pantalla.</p>
+      </div>
+      <div class="service">
+        <h3>Planillas de Venta</h3>
+        <p>Registros listos para imprimir, numeración automática y control por vendedor.</p>
+      </div>
+      <div class="service">
+        <h3>Caja Financiera</h3>
+        <p>Controla entradas, salidas, ventas por método de pago y resumen de ingresos.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="asesoria">
+    <h2>Asesoría Completa</h2>
+    <p>Te guiamos paso a paso para que montes tu negocio desde cero:</p>
+    <ul>
+      <li>Cómo organizar tu primera transmisión</li>
+      <li>Cómo vender y entregar tus tablas</li>
+      <li>Cómo atraer audiencia y aumentar las ventas</li>
+      <li>Soporte técnico continuo</li>
+    </ul>
+  </section>
+
+  <section id="contacto">
+    <h2>Contáctanos</h2>
+    <p>Escríbenos para más información o una demostración:</p>
+    <p>Email: <a href="mailto:mlandsoftware@gmail.com">mlandsoftware@gmail.com</a></p>
+    <p>WhatsApp: <a href="https://wa.me/593999999999" target="_blank">+593 99 999 9999</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 MLand Software. Todos los derechos reservados.</p>
+  </footer>
 </body>
 </html>
